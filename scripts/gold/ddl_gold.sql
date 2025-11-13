@@ -39,7 +39,7 @@ on 			cust.cst_key = erp_loc.cid ;
 
 
 -- Create Dimension: gold.dim_products 
-create or replace view if not exists gold.dim_products as 
+create or replace view  gold.dim_products as 
 select 
 	row_number() over(order by pn.prd_start_dt,pn.prd_key) as product_key, -- Surrogate key 
 	pn.prd_id as product_id,
@@ -60,7 +60,7 @@ where pn.prd_end_dt is null -- Filter out all historical data ;
 
 
 -- Create Fact Table: gold.fact_sales 
-create or replace view if not exists gold.fact_sales as 
+create or replace view  gold.fact_sales as 
 select 
 	sd.sls_ord_num as order_number,
 	pr.product_key,
