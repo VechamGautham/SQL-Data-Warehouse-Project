@@ -46,7 +46,7 @@ A complete visual lineage showing how each source table flows through all three 
 
 ## Sales Data Mart (Star Schema)
 
-![Star Schema](./docs/data_model_diagram.png)
+![Star Schema](./docs/data_model_.png)
 
 The Gold Layer exposes a star schema with a central fact table linked to conformed customer and product dimensions—directly used for BI and reporting.
 
